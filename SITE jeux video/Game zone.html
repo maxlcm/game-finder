@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game zone </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7e7e7ede;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fcfcfc;
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #3e3e3e;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        .banner {
+            background-image: url('https://example.com/your-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner h1 {
+            font-size: 4em;
+        }
+
+        .content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .games-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .game-card {
+            background-color: #282828;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .game-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .game-card h3 {
+            margin: 10px 0;
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            text-align: center;
+            color: #b3b3b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- En-tête du site -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#">Accueil</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Jeux en vedette</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">À propos</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bannière principale -->
+    <section class="banner">
+        <h1>Bienvenue sur GameZone</h1>
+    </section>
+
+    <!-- Contenu principal -->
+    <div class="content">
+        <h2>Découvrez les meilleurs jeux</h2>
+        <p>Explorez notre sélection des jeux les plus populaires et les plus attendus.</p>
+
+        <!-- Section des jeux en vedette -->
+        <div class="games-section">
+            <div class="game-card">
+                <img src="./Game zone_files/game1.jpg" alt="Jeu 1">
+                <h3>Jeu Épique 1</h3>
+                <p>Un jeu d'action palpitant à ne pas manquer.</p>
+            </div>
+
+            <div class="game-card">
+                <img src="./Game zone_files/game2.jpg" alt="Jeu 2">
+                <h3>Jeu Aventure 2</h3>
+                <p>Vivez une aventure inoubliable dans un monde ouvert.</p>
+            </div>
+
+            <div class="game-card">
+                <img src="./Game zone_files/game3.jpg" alt="Jeu 3">
+                <h3>Jeu Stratégie 3</h3>
+                <p>Déployez vos stratégies dans ce jeu complexe.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2024 GameZone. Tous droits réservés.</p>
+    </footer>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -1,0 +1,52 @@
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="connexion.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+</head>
+    <div class="w3-top">
+        <div class="w3-row w3-padding w3-black">
+        <div class="w3-col s3">
+            <a href="accueil.html" class="w3-button w3-block w3-black">ACCEUIL</a>
+        </div>
+        <div class="w3-col s3">
+            <a href="recherche.html" class="w3-button w3-block w3-black">RECHERCHE</a>
+         </div>
+        <div class="w3-col s3">
+            <a href="connexion.html" class="w3-button w3-block w3-black">COMPTE</a>
+         </div>
+        <div class="w3-col s3">
+            <a href="#PARAMETRE" class="w3-button w3-block w3-black">PARAMETRE</a>
+
+        
+        </div>
+     </div>
+    <body>
+    <div class="login-container">
+        <h1>Connexion</h1>
+        <form id="loginForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <button type="submit">Se connecter</button>
+            </div>
+            <p id="error-message" class="error"></p>
+        </form>
+        <p>Pas encore de compte ? <a href="inscription.html">Inscription</a></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SITE.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" href="accueil.css">
+
+</head>
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+  <div class="w3-col s3">
+      <a href="accueil.html" class="w3-button w3-block w3-black">ACCEUIL</a>
+  </div>
+  <div class="w3-col s3">
+      <a href="recherche.html" class="w3-button w3-block w3-black">RECHERCHE</a>
+   </div>
+  <div class="w3-col s3">
+      <a href="connexion.html" class="w3-button w3-block w3-black">COMPTE</a>
+   </div>
+  <div class="w3-col s3">
+      <a href="#PARAMETRE" class="w3-button w3-block w3-black">PARAMETRE</a>
+  </div>
+</div>
+
+<body>
+  
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="MENU">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">site</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-black" style="font-size:90px">GAME<br>ZONE</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">SUR GAMEZO</span></h5>
+    <p>x</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="PARAMETRE" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">PARAMETRE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+<!-- <script>
+const url = 'https://id-game-checker.p.rapidapi.com/ff-player-info/1662626173/SG';
+const options = {
+	method: 'GET',
+	headers: {
+		'x-rapidapi-key': '8f6a677874mshbac4cee1638510bp10e79cjsn7610711343ab',
+		'x-rapidapi-host': 'id-game-checker.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+
+</script> -->
+
+</body>
+</html>

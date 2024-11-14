@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME FINDER/recherche</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>GAME FINDER</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="boite" id="boite">
+     <div class="search-text">
+        <h2>RECHERCHE</h2>
+
+        <div class="recherche-bar"> 
+           <form>
+             <label for="game-search">RECHERCHER UN JEU</label>
+             <input type="text" id="game-search" name="game-search" placeholder="Mario Kart...">
+             <button type="button" onclick="searchGame()">Rechercher</button>
+             <ul id="results"></ul>
+             <div id="game-details">bonjour</div>
+           </form>
+        </div>
+    </div>
+
+    
+
+</body>
+</html>
+
+<script>
+function searchGame() {
+    const query = document.getElementById('game-search').value;
+    const apiKey = '06e6adbb976e4866a61db1345bbffdbc';
+    const url = `https://api.rawg.io/api/games?key=${apiKey}&search=${encodeURIComponent(query)}`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .then(data => {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Vide les résultats précédents
+            const boite = document.getElementById('boite');
+            if (data.results && data.results.length > 0) {
+                data.results.forEach(game => {
+                    const listItem = document.createElement('li');
+                    const button = document.createElement('button');
+                    const divItem = document.createElement('div');
+
+                    button.textContent = game.name;
+                    button.onclick = () => showGameDetails(game);
+
+                    listItem.appendChild(button);
+                    listItem.appendChild(divItem);
+                    resultsContainer.appendChild(listItem);
+
+                    button.addEventListener("click", ()=>{
+                        const detailsContainer = document.getElementById('game-details');
+                        alert("hello");
+                        detailsContainer.innerHTML = `
+                        <h3>${game.name}</h3>
+                        <p> date de sortie :  ${game.released} </p>
+                        <p>Note : ${game.rating}</p>
+                        <p>Description : ${game.description || "Description non disponible"}</p>
+                        <img src="${game.background_image}" alt="${game.name}" style="width: 300px; height: auto;">`;
+                    })
+ 
+                });
+            } else {
+                const listItem = document.createElement('li');
+                listItem.textContent = 'Aucun résultat trouvé.';
+                resultsContainer.appendChild(listItem);
+            }
+        })
+        .catch(error => {
+            console.error("Il y a eu un problème avec la requête :", error);
+        });
+
+}
+
+function displayGameDetails(game) {
+    const detailsContainer = document.getElementById('game-details');
+    detailsContainer.innerHTML = `
+        <h3>${game.name}hgdhsqgjdfgjghf</h3>
+        <p> date de sortie :  ${game.released} </p>
+        <p>Note : ${game.rating}</p>
+        <p>Description : ${game.description || "Description non disponible"}</p>
+        <img src="${game.background_image}" alt="${game.name}" style="width: 300px; height: auto;">`;
+
+ }
+
+
+</script>
+
+
+    <!--/* "https://api.rawg.io/api/platforms?key=06e6adbb976e4866a61db1345bbffdbc" */-->
